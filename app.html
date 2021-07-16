@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Customer Churn Prediction</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+    <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Customer Churn Prediction</h1>
+      <div class="row center">
+        <h3 class="header col s12 light">Predict the probability of Customers who are likely to churn
+        <br>
+        </h3>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+     <p><B>Gender</B>
+     <div >
+    <input type="radio" id="Female" name="Gender" value="Female" class="validate"
+         checked>
+     <label for="Female">Female</label>
+    </div>
+     <div >
+    <input type="radio" id="Male" name="Gender" value="Male" class="validate"
+         checked>
+     <label for="Male">Male</label>
+    </div>
+</p>
+          
+  <p><B>IsActiveMember</B>
+     <div >
+    <input type="radio" id="0" name="Gender" value="0" class="validate"
+         checked>
+     <label for="0">0</label>
+    </div>
+     <div >
+    <input type="radio" id="1" name="Gender" value="1" class="validate"
+         checked>
+     <label for="1">1</label>
+    </div>
+</p>
+
+<p> <div class="input-field col s4">
+            <label for="first_name"><b>Age</b></label>
+            <br>
+          <input placeholder="Age" name="Age" id="first_name" type="text" class="validate">
+        </div>
+<p><div><label><B>Geography</B></label>
+<select>
+<option value = "Germany"> Germany
+</option>
+<option value = "France"> France
+</option>
+<option value = "Spain"> Spain
+</option>
+
+</select>
+</div>
+  <p><div><label><b>Number of Products</b></label>
+<select>
+<option value = "1">1
+</option>
+<option value = "2"> 2
+</option>
+<option value = "3"> 3
+</option>
+<option value = "4"> 4
+</option>
+</select>
+</div>
+ <p><div class="input-field col s4">
+
+          <label for="last_name"><b>Balance </b></label>
+            <br>
+          <input id="last_name" name="Balance" placeholder="Balance"  type="text" class="validate">
+
+        </div>
+
+<p> <div class="input-field col s4">
+            <label for="_name"><b>Estimated Salary</b></label>
+            <br>
+          <input id="_name" name="Estimated Salary" placeholder="Estimated Salary" type="text" class="validate">
+
+        </div>
+<p><div class="input-field col s4">
+            <label for="_name1"><b>CreditScore</b></label>
+            <br>
+          <input id="_name" name="CreditScore" placeholder="300-900" type="text" class="validate">
+
+        </div>
+
+
+      </div>
+
+      <div class="row center">
+
+         <p><button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+
+      <br>
+        {{pred}}<br>
+
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>>
+
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+    </div>
+  </div>
+</body>
+
+</html>
